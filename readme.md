@@ -35,57 +35,57 @@ This project is a backend service for a course management platform built with th
 ## API Endpoints
 ### Admin Routes
 **POST /admin/signup**
-Description: Register a new admin account.
-Request Body: { "username": "string", "password": "string" }
-Response: 201 Created on success, with admin details.
+- Description: Register a new admin account.
+- Request Body: { "username": "string", "password": "string" }
+- Response: 201 Created on success, with admin details.
 
 **POST /admin/login**
-Description: Login for admin.
-Request Body: { "username": "string", "password": "string" }
-Response: 200 OK with JWT token.
+- Description: Login for admin.
+- Request Body: { "username": "string", "password": "string" }
+- Response: 200 OK with JWT token.
 
 **POST /admin/courses**
-Description: Create a new course (authentication required).
-Request Body: { "title": "string", "description": "string","image":"string","price":"number"}
-Response: 201 Created on success, with course details.
+- Description: Create a new course (authentication required).
+- Request Body: { "title": "string", "description": "string","image":"string","price":"number"}
+- Response: 201 Created on success, with course details.
 
 **GET /admin/courses**
-Description: Get Courses Created By Admin (authentication required).
-Request Headers: { "Authorization": "JWT token"}
-Response: 200 all courses list.
+- Description: Get Courses Created By Admin (authentication required).
+- Request Headers: { "Authorization": "JWT token"}
+- Response: 200 all courses list.
 
 ### User Routes
 
 **POST /user/signup**
-Description: Register a new user account.
-Request Body: { "username": "string", "password": "string" }
-Response: 201 Created on success, with user details.
+- Description: Register a new user account.
+- Request Body: { "username": "string", "password": "string" }
+- Response: 201 Created on success, with user details.
 
 **POST /user/login**
 
-Description: Login for user.
-Request Body: { "username": "string", "password": "string" }
-Response: 200 OK with JWT token.
+- Description: Login for user.
+- Request Body: { "username": "string", "password": "string" }
+- Response: 200 OK with JWT token.
 
 **POST /user/courses/:id**
 
-Description: Purchase a course (authentication required, payment not implemented).
-Request Params: id - The ID of the course to purchase.
-Response: 200 OK on success, with purchase details.
+- Description: Purchase a course (authentication required, payment not implemented).
+- Request Params: id - The ID of the course to purchase.
+- Response: 200 OK on success, with purchase details.
 
 **GET /user/allcourses**
 
-Description: get all courses available (authentication required).
-Request Headers: "Authorization" jwt token.
-Response: 200 OK on success, list of all courses.
+- Description: get all courses available (authentication required).
+- Request Headers: "Authorization" jwt token.
+- Response: 200 OK on success, list of all courses.
 
 **GET /user/courses**
 
-Description: get all purchased course (authentication required).
-Request Headers: "Authorization" jwt token.
-Response: 200 OK on success, list of all purchased courses.
+- Description: get all purchased course (authentication required).
+- Request Headers: "Authorization" jwt token.
+- Response: 200 OK on success, list of all purchased courses.
 
 ## Future Enhancements
-**Payment Integration: Implement payment gateway integration for course purchases.**
-**Course Catalog: Add functionality for users to browse and search for courses.**
-**Admin Dashboard: Develop a dashboard for admins to manage courses and users.**
+- **Payment Integration**: Implement payment gateway integration for course purchases.
+- **Course Catalog**: Add functionality for users to browse and search for courses.
+- **Admin Dashboard**: Develop a dashboard for admins to manage courses and users.
