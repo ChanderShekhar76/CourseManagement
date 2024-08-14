@@ -22,7 +22,6 @@ router.post('/signup',async (req,res)=>{
 //login
 router.get('/allcourses',verifyUser,async(req,res)=>{
     try{
-        console.log("Hiiiiiii")
         const courses = await Course.find({}).populate({path: 'createdBy',select:'username'}).exec()
         if(courses.length == 0) return res.status(404).json({error: 'No Courses Available'})
         res.status(200).json({data:courses})
